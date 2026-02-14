@@ -7,9 +7,47 @@ nav li {margin:0;}
 nav a:hover {color:#d35400;}
 .hamburger {display:none; cursor:pointer; font-size:24px;}
 section {padding:40px 20px; max-width:1000px; margin:0 auto;}
-.hero {position:relative; text-align:center;}
-.hero img {width:100%; height:auto; border-radius:12px;}
-.hero-text {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-shadow:1px 1px 4px #000;}
+.hero {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35); /* semi-transparent overlay */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    padding: 0 20px;
+}
+
+@media(max-width:768px){
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
 .menu-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;}
 .menu-card {background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;}
 .menu-card:hover {transform:scale(1.05);}
