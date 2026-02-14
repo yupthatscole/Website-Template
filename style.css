@@ -1,0 +1,16 @@
+body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333;}
+a {text-decoration:none; color:#333;}
+header {background:#f8c291; padding:20px 0; text-align:center;}
+header h1 {margin:0;}
+nav ul {list-style:none; display:flex; justify-content:center; padding:0; margin:10px 0 0 0;}
+nav li {margin:0 15px;}
+nav a:hover {color:#d35400;}
+section {padding:40px 20px; max-width:1000px; margin:0 auto;}
+.menu-item {display:flex; justify-content:space-between; margin-bottom:10px;}
+.gallery img {width:30%; margin:1%; border-radius:8px;}
+form {max-width:500px; margin:0 auto; display:flex; flex-direction:column;}
+input, textarea, select {padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;}
+button {padding:10px; border:none; border-radius:5px; background:#f8c291; color:#333; font-weight:bold; cursor:pointer;}
+button:hover {background:#d35400; color:#fff;}
+footer {text-align:center; padding:20px; background:#f8c291; margin-top:40px;}
+@media(max-width:600px) { .gallery img {width:48%; margin:1%;} nav ul {flex-direction:column;} nav li {margin:10px 0;} }
