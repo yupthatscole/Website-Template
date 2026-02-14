@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Crumbs Bakery - Menu</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Crumbs Bakery - Menu</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <h1>Sweet Crumbs Bakery</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Order/Contact</a></li>
-        </ul>
-    </nav>
+    <div class="header-container">
+        <h1>Sweet Crumbs Bakery</h1>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Order/Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<section>
+<section class="menu">
     <h2>Our Menu</h2>
-    <div class="menu-item"><span>Chocolate Cake</span><span>$XX.XX</span></div>
-    <div class="menu-item"><span>Vanilla Cupcake</span><span>$XX.XX</span></div>
-    <div class="menu-item"><span>Strawberry Tart</span><span>$XX.XX</span></div>
-    <div class="menu-item"><span>Placeholder Item</span><span>$XX.XX</span></div>
-    <p>More items coming soon!</p>
+    <div class="menu-grid">
+        <div class="menu-card">
+            <img src="placeholder1.jpg" alt="Chocolate Cake">
+            <h3>Chocolate Cake</h3>
+            <p>$XX.XX</p>
+        </div>
+        <div class="menu-card">
+            <img src="placeholder2.jpg" alt="Vanilla Cupcake">
+            <h3>Vanilla Cupcake</h3>
+            <p>$XX.XX</p>
+        </div>
+        <div class="menu-card">
+            <img src="placeholder3.jpg" alt="Strawberry Tart">
+            <h3>Strawberry Tart</h3>
+            <p>$XX.XX</p>
+        </div>
+        <div class="menu-card">
+            <img src="placeholder4.jpg" alt="Placeholder Item">
+            <h3>Placeholder Item</h3>
+            <p>$XX.XX</p>
+        </div>
+    </div>
 </section>
 <footer>
     <p>&copy; 2026 Sweet Crumbs Bakery. All rights reserved.</p>
 </footer>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
